@@ -193,7 +193,7 @@ def chitot(ce,ge,ratse,delta,Eg,de,s,phi,ratpe,indpul,Epn,E_d):
 	kitot = []
 	for i in  range(len(Ecal)):
 		if Ecal[i] > 10. and Ecal[i] <= 3000. :
-			sourceterm = sourceparam(ce,ge,ratpe,indpul,phi,Epn,Ecal[i])
+			sourceterm = 2*sourceparam(ce,ge,ratpe,indpul,phi,Epn,Ecal[i])
 			ctot =ctot + ((sourceterm +elecparam(ce,ge,ratse,delta,Eg,de,s,phi,E_d,Ecal[i])+ posiparam(ce,ge,ratse,delta,phi,Ecal[i])-CALvals[Ecal[i]][0])**2 / CALvals[Ecal[i]][1] **2  )
 			kitot.append(ctot)
 			
@@ -209,7 +209,7 @@ def chivaltot(ce,ge,ratse,delta,Eg,de,s,phi,ratpe,indpul,Epn,E_d):
 	kitotval = []
 	for i in  range(len(Ecal)):
 		if Ecal[i] > 10. and Ecal[i] <= 3000. :
-			sourceterm = sourceparam(ce,ge,ratpe,indpul,phi,Epn,Ecal[i])
+			sourceterm = 2*sourceparam(ce,ge,ratpe,indpul,phi,Epn,Ecal[i])
 			ctotval =ctotval + ((sourceterm +elecparam(ce,ge,ratse,delta,Eg,de,s,phi,E_d,Ecal[i])+posiparam(ce,ge,ratse,delta,phi,Ecal[i])-CALvals[Ecal[i]][0])**2 / CALvals[Ecal[i]][1] **2  )
 			kitotval.append(ctotval)
 			#print Ecal[i], ctotval
@@ -255,15 +255,16 @@ def chiposival(ce,ge,ratse,delta,phi,ratpe,indpul,Epn):
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #rig = [25,30,31,33,35,37,40,42,45,48,50,53,55,60] # break energy in the power law spectrum  
 rig = [20,22,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,55,57,60,63,65,70,75,80,85,90,95,100,110,120,135,150,180,200] # break
+# later on rigidity break energy was taken as a free parameter. So scan is unnecessary
 #smooth = [0.01,0.03,0.05,0.1] # smoothness 
-smooth=[0.2]
+smooth=[(a+1)*0.05 for a in range(20)]
 #solmod = [0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1.0] # solar modulation potential 
 #solmod=[0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0,1.1]
 solmod = [0.4]
 
 
 pulcut=[100,110,120,130,140,150,160,170,180,190,200,220,240,270,290,300,350,400,450,500,550,600,650,700,800,900,1000,2000,3000,4000,5000,6000,7000,9000,10000]
-#pulcut = [500]
+#pulcut = [500]# later 1200 GeV, 1500 GeV energies are added 
 
 
 
