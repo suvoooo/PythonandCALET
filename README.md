@@ -10,7 +10,7 @@ Similarly single pulsar parametrization fit to CALET + AMS-02 Data for a backgro
 
 ![below](https://github.com/suvoooo/PythonandCALET/blob/master/pulbestfitEd10TeV/bestfitEd10TeVEpwn700GeVs0d05phi0d5.png)
 
-It is shown that using simulated CALET data for 5 years and using simple statistical method (AIC) DM model cannot be separated from Pulsar model. Details of the results are published in [International Journal of Modern Physics D](https://www.worldscientific.com/doi/10.1142/S0218271819500354)
+It is shown that using simulated CALET data for 5 years and using simple statistical method (AIC), DM model can be separated with a maximum probability of 45% . Details of the results are published in [International J of Modern Physics D](https://www.worldscientific.com/doi/10.1142/S0218271819500354)
 
 Later I have uploaded my personal understanding of PCA analysis with background 
 parameters obtained from fitting to CALET simulated data. This are only for understanding the correlation 
