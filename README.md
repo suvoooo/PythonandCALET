@@ -1,4 +1,4 @@
-# Interpretation of Electron Spectrum CALET data. 
+# Interpretation of Electron Spectrum Measured by [CALET](https://calet.jp/). 
 
 This repo contains some of the codes used for the interpreation of  CALET electron + AMS-02 positron flux. Both DM and Pulsar models can explain the measurement. 
 
